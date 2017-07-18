@@ -1,0 +1,102 @@
+<?php namespace DummyNamespace;
+
+use Orchid\Integrator\Repository\BaseAdminRepository;
+use Illuminate\Http\Request;
+
+class DummyClass extends BaseAdminRepository
+{
+
+    /**
+     * @var string
+     */
+    public $route = 'demo';
+
+    /**
+     * @var string
+     */
+    public $slug = 'id';
+
+    /**
+     * @return array
+     */
+    public function fields() : array
+    {
+        return [];
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return array
+     */
+    public function index()
+    {
+        return $this->response([]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return array
+     */
+    public function create()
+    {
+        return $this->response([]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function store(Request $request)
+    {
+        return $this->response([]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return array
+     */
+    public function show($id)
+    {
+        return $this->response([]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return array
+     */
+    public function edit($id)
+    {
+        return $this->response([]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return array
+     */
+    public function update(Request $request, $id)
+    {
+        return $this->response([]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return array
+     */
+    public function destroy($id)
+    {
+        return $this->response([]);
+    }
+}
