@@ -22,14 +22,14 @@ abstract class BaseAdminRepository
      *
      * @return array
      */
-    protected function response(array $data) : array
+    protected function response(array $data)
     {
-        return [
+        return response()->json([
             'route'     => $this->route,
             'slug'      => $this->slug,
             'behaviors' => $this->fields(),
             'data'      => $data,
-        ];
+        ]);
     }
 
 }
