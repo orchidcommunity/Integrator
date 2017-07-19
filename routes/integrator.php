@@ -17,6 +17,9 @@ $this->group([
 
     $integrator = new Orchid\Integrator\Integrator();
 
+
+    $router->get('/', 'Orchid\Integrator\Integrator@map');
+
     foreach ($integrator->getRoute() as $route) {
         $router->resource($route['route'], $route['class'], [
             'as' => 'integrator',

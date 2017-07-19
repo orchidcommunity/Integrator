@@ -4,6 +4,20 @@ namespace Orchid\Integrator\Repository;
 
 abstract class BaseAdminRepository
 {
+    /**
+     * @var string
+     */
+    public $name = 'Demo';
+
+    /**
+     * @var string
+     */
+    public $description = 'Demo';
+
+    /**
+     * @var string
+     */
+    public $icon = 'fa fa-archive';
 
     /**
      * @var string
@@ -24,12 +38,11 @@ abstract class BaseAdminRepository
      */
     protected function response(array $data)
     {
-        return response()->json([
-            'route'     => $this->route,
-            'slug'      => $this->slug,
-            'behaviors' => $this->fields(),
-            'data'      => $data,
-        ]);
+        $default = (array) $this;
+        $default['behaviors'] = $this->fields();
+        $default['data'] = $data;
+
+        return response()->json($default);
     }
 
 }

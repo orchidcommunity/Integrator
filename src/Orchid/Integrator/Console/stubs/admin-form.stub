@@ -9,7 +9,22 @@ class DummyClass extends BaseAdminRepository
     /**
      * @var string
      */
-    public $route = 'demo';
+    public $name = 'Demo';
+
+    /**
+     * @var string
+     */
+    public $description = 'Demo';
+
+    /**
+     * @var string
+     */
+    public $icon = 'fa fa-archive';
+
+    /**
+     * @var string
+     */
+    public $route = 'user';
 
     /**
      * @var string

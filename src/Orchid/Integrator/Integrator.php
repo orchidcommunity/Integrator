@@ -85,6 +85,14 @@ class Integrator
     }
 
     /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function map()
+    {
+        return response()->json($this->getRoute());
+    }
+
+    /**
      *
      * @return array
      */
@@ -92,15 +100,12 @@ class Integrator
     {
         $routes = [];
         foreach ($this->repository as $repository) {
-            $routes[] = [
-                'route' => $repository->route,
-                'slug'  => $repository->slug,
-                'class' => get_class($repository),
-            ];
+
+            $default = (array) $repository;
+            $default['class'] = get_class($repository);
+            $routes[] = $default;
         }
 
         return $routes;
     }
-
-
 }
