@@ -46,6 +46,7 @@ class DummyClass extends BaseAdminRepository
      */
     public function index()
     {
+        // action
         return $this->response([]);
     }
 
@@ -56,6 +57,7 @@ class DummyClass extends BaseAdminRepository
      */
     public function create()
     {
+        // action
         return $this->response([]);
     }
 
@@ -67,17 +69,7 @@ class DummyClass extends BaseAdminRepository
      */
     public function store(Request $request)
     {
-        return $this->response([]);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return array
-     */
-    public function show($id)
-    {
+        // action
         return $this->response([]);
     }
 
@@ -89,6 +81,7 @@ class DummyClass extends BaseAdminRepository
      */
     public function edit($id)
     {
+        // action
         return $this->response([]);
     }
 
@@ -101,6 +94,7 @@ class DummyClass extends BaseAdminRepository
      */
     public function update(Request $request, $id)
     {
+        // action
         return $this->response([]);
     }
 
@@ -112,6 +106,7 @@ class DummyClass extends BaseAdminRepository
      */
     public function destroy($id)
     {
+        // action
         return $this->response([]);
     }
 }

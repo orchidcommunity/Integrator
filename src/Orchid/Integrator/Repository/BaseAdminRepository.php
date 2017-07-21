@@ -36,7 +36,7 @@ abstract class BaseAdminRepository
      *
      * @return array
      */
-    protected function response(array $data)
+    protected function response($data)
     {
         $default = (array) $this;
         $default['behaviors'] = $this->fields();
