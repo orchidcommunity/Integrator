@@ -2,6 +2,8 @@
 
 namespace Orchid\Integrator;
 
+use Illuminate\Support\Str;
+
 class Integrator
 {
 
@@ -54,7 +56,7 @@ class Integrator
      */
     private static function after($subject, $search, $before = false) : string
     {
-        if ($search == '') {
+        if (Str::length($search) === 0) {
             return $subject;
         }
         $pos = strpos($subject, $search);

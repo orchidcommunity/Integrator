@@ -10,11 +10,12 @@
     }
   ],
   "require": {
-    "php": ">=7.0"
+    "php": ">=7.0",
+    "orchid/foundation": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "Orchid\\": "src/Orchid"
+      "Orchid\\Integrator\\": "src/"
     }
   },
   "extra": {
@@ -22,6 +23,6 @@
       "dev-master": "1.0-dev"
     }
   },
-  "minimum-stability": "alpha",
+  "minimum-stability": "dev",
   "prefer-stable": true
 }
