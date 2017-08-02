@@ -14,16 +14,11 @@ $this->group([
     'prefix'     => 'integrator',
 ], function ($router) {
 
-
-    $integrator = new Orchid\Integrator\Integrator();
-
-
     $router->get('/', 'Orchid\Integrator\Integrator@map');
 
-    foreach ($integrator->getRoute() as $route) {
+    foreach (app(Orchid\Integrator\Integrator::class)->getRoute() as $route) {
         $router->resource($route['route'], $route['class'], [
             'as' => 'integrator',
         ]);
     }
-
 });
