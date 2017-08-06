@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 
 class IntegratorMiddleware
 {
-
     /**
-     * @param  Request $request
+     * @param Request  $request
      * @param \Closure $next
      *
      * @return mixed

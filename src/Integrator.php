@@ -6,7 +6,6 @@ use Illuminate\Support\Str;
 
 class Integrator
 {
-
     /**
      * @var array
      */
@@ -26,7 +25,7 @@ class Integrator
     }
 
     /**
-     * Register all repository
+     * Register all repository.
      *
      * @return Integrator
      */
@@ -35,7 +34,7 @@ class Integrator
         foreach (glob(app_path('Admin/*')) as $key => $class) {
             $class = self::after($class, 'Admin/');
             $class = self::before($class, '.php');
-            $class = $this->namespace . $class;
+            $class = $this->namespace.$class;
             $this->repository[] = new $class();
         }
 
@@ -48,9 +47,9 @@ class Integrator
      * @deprecated https://github.com/laravel/framework/issues/20125
      * Return the remainder of a string after a given value.
      *
-     * @param  string $subject
-     * @param  string $search
-     * @param  bool   $before
+     * @param string $subject
+     * @param string $search
+     * @param bool   $before
      *
      * @return string
      */
@@ -76,8 +75,8 @@ class Integrator
      *
      * Return the string before the given value.
      *
-     * @param  string $subject
-     * @param  string $search
+     * @param string $subject
+     * @param string $search
      *
      * @return string
      */
@@ -95,14 +94,12 @@ class Integrator
     }
 
     /**
-     *
      * @return array
      */
     public function getRoute() : array
     {
         $routes = [];
         foreach ($this->repository as $repository) {
-
             $default = (array) $repository;
             $default['class'] = get_class($repository);
             $routes[] = $default;

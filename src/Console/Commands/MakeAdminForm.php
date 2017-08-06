@@ -34,7 +34,7 @@ class MakeAdminForm extends GeneratorCommand
      */
     protected function getStub() : string
     {
-        return __DIR__ . '/../stubs/admin-form.stub';
+        return __DIR__.'/../stubs/admin-form.stub';
     }
 
     /**
@@ -46,6 +46,6 @@ class MakeAdminForm extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace) : string
     {
-        return $rootNamespace . '\Admin';
+        return $rootNamespace.'\Admin';
     }
 }
