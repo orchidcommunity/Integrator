@@ -24,7 +24,7 @@ class IntegratorServiceProvider extends ServiceProvider
 
         Route::middlewareGroup('integration', [IntegratorMiddleware::class]);
 
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/integrator.php');
+        $this->loadRoutesFrom(__DIR__.'/../../routes/integrator.php');
     }
 
     /**
@@ -35,7 +35,7 @@ class IntegratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->instance(Integrator::class, function () {
-            return new Integrator;
+            return new Integrator();
         });
     }
 

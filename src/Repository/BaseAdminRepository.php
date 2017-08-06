@@ -30,7 +30,7 @@ abstract class BaseAdminRepository
     public $slug = 'id';
 
     /**
-     * Response data
+     * Response data.
      *
      * @param array $data
      *
@@ -44,5 +44,4 @@ abstract class BaseAdminRepository
 
         return response()->json($default);
     }
-
 }
